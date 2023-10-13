@@ -1,0 +1,15 @@
+[Unit]
+Description=Server robi budlaska
+Requires=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target
+
+
+[Service]
+ExecStart=java -jar /opt/sample/service.jar
+Environment="PORT=8888"
+User=drehalo_mykola
+Restart=always
+RestartSec=10
